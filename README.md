@@ -1,6 +1,6 @@
 # To Do List - iPhone App
 
-<h4>⬇️ Used pods ⬇️ </h4>
+<h4>⬇️ Used CocoaPods🥥 ⬇️ </h4>
 <br> 📙 Realm for data persistance </br>
 <br> 🗑️ SwipeCellKit for swipe-able item delete effect (like Mail app) </br>
 <br> 🎨 ChameleonFramework for colors </br>
