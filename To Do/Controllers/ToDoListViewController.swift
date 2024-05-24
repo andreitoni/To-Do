@@ -52,7 +52,7 @@ class ToDoListViewController: SwipeTableViewController {
             // value = condition ? valueIfTrue : valueIfFalse
             cell.accessoryType = item.done ? .checkmark : .none
         } else {
-            cell.textLabel?.text = "Niciun lucru adaugat"
+            cell.textLabel?.text = "Nothing added yet..."
         }
         
         return cell
@@ -83,27 +83,32 @@ class ToDoListViewController: SwipeTableViewController {
         
         var textField = UITextField()
         
-        let alert = UIAlertController(title: "Adauga obiect nou", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add new item", message: "", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Adauga obiect", style: .default) { action in
+        let action = UIAlertAction(title: "Add item", style: .default) { action in
             // what will happen once the user clicks the add item button on our UI alert
-            do {
-                if let currentCategory = self.selectedCategory {
-                    try self.realm.write {
-                        let newItem = Item()
-                        newItem.title = textField.text!
-                        newItem.dateCreated = Date()
-                        currentCategory.items.append(newItem)
+            if !textField.text!.isEmpty {
+                do {
+                    if let currentCategory = self.selectedCategory  {
+                        try self.realm.write {
+                            let newItem = Item()
+                            newItem.title = textField.text!
+                            newItem.dateCreated = Date()
+                            currentCategory.items.append(newItem)
+                        }
                     }
+                } catch {
+                    print("error saving new items \(error)")
                 }
-            } catch {
-                print("error saving new items \(error)")
+            } else {
+                
             }
+            
             self.tableView.reloadData()
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Creeaza obiect nou"
+            alertTextField.placeholder = "Create new item"
             textField = alertTextField
         }
         

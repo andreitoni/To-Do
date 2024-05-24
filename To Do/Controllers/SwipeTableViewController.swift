@@ -26,7 +26,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
 
         cell.delegate = self
         
-        cell.backgroundColor = UIColor.flatLimeDark()
+        cell.backgroundColor = UIColor(named: "limeDark")
         
         return cell
     }
@@ -35,7 +35,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
 
-        let deleteAction = SwipeAction(style: .destructive, title: "Șterge") { action, indexPath in
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             // handle action by updating model with deletion
             
             

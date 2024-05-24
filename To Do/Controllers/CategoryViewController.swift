@@ -7,7 +7,6 @@
 
 import UIKit
 import RealmSwift
-import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
@@ -32,7 +31,7 @@ class CategoryViewController: SwipeTableViewController {
     
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "Nicio categorie adaugata"
+        cell.textLabel?.text = categories?[indexPath.row].name ?? "No category added"
         
         
         return cell
@@ -80,19 +79,23 @@ class CategoryViewController: SwipeTableViewController {
         
         var textField = UITextField()
         
-        let alert = UIAlertController(title: "Adauga categorie noua", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add new category", message: "", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Adauga Categorie", style: .default) { action in
+        let action = UIAlertAction(title: "Add Category", style: .default) { action in
             
             let newCategory = Category()
-            newCategory.name = textField.text!
             
-            
-            self.save(category: newCategory)
+            if textField.text!.isEmpty {
+                
+            } else {
+                newCategory.name = textField.text!
+                self.save(category: newCategory)
+            }
+    
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Creeaza categorie noua"
+            alertTextField.placeholder = "Create new category"
             textField = alertTextField
         }
         
