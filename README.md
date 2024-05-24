@@ -6,7 +6,7 @@
 <br> 🎨 ChameleonFramework for colors </br>
 <br> </br>
 
-<img src = "SCREENSHOTS/categories.png" width = 250> <img src = "SCREENSHOTS/list.png" width = 250> 
-<img src = "SCREENSHOTS/delete.png" width = 250> <img src = "SCREENSHOTS/logo.png" width = 150>
+<img src = "SCREENSHOTS/category.png" width = 250> <img src = "SCREENSHOTS/add.png" width = 250> 
+<img src = "SCREENSHOTS/del.png" width = 250> <img src = "SCREENSHOTS/logo.png" width = 150>
 
 
