@@ -66,7 +66,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lpj-MB-luC">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.97233515339966736" green="1" blue="0.74112241927461353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="lemonColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="292" y="15"/>
         </scene>
-        <!--Categorii-->
+        <!--Category-->
         <scene sceneID="gVn-E4-ZDU">
             <objects>
                 <tableViewController id="3yW-fo-E1d" customClass="CategoryViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                             <outlet property="delegate" destination="3yW-fo-E1d" id="0gz-1r-Pje"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categorii" id="LdB-Lb-djW">
+                    <navigationItem key="navigationItem" title="Category" id="LdB-Lb-djW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pxs-Pc-ELq">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -124,7 +124,7 @@
     </scenes>
     <resources>
         <namedColor name="lemonColor">
-            <color red="0.97233515339999999" green="1" blue="0.7411224193" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97200000286102295" green="1" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
